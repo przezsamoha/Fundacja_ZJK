@@ -1,0 +1,19 @@
+---
+const { key } = Astro.props;
+
+const headersColor = "#454b47";
+---
+
+<style define:vars={{ headersColor }}>
+  h3 {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--headersColor);
+    text-size-adjust: none;
+  }
+</style>
+
+<div>
+  <h3>{key}&nbsp<slot /></h3>
+</div>

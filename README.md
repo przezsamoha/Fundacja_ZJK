@@ -1,0 +1,1 @@
+Fundacja im. Zygmunta i Jana Karłowskich

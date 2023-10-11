@@ -1,0 +1,227 @@
+---
+import { Image } from "astro:assets";
+
+import Data from "../components/data.astro";
+import logo from "../../src/img/logo.jpg";
+
+const { key } = Astro.props;
+
+const foregroundColor = "#ffffff";
+const backgroundColor = "#757d77";
+const headersColor = "#454b47";
+const textColor = "#333333";
+const shadowColor = "#5c635e";
+---
+
+<style
+  define:vars={{
+    foregroundColor,
+    backgroundColor,
+    headersColor,
+    textColor,
+    shadowColor,
+  }}
+>
+  body {
+    font-family: "PT Sans", sans-serif;
+    color: var(--textColor);
+    min-height: 100vh;
+    width: 100vw;
+    text-size-adjust: none;
+  }
+
+  h1 {
+    font-family: "PT Serif", serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--headersColor);
+    text-size-adjust: none;
+  }
+
+  hr {
+    border: 0.8px solid var(--shadowColor);
+    margin-bottom: 2rem;
+  }
+
+  .hr-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--shadowColor);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.4px;
+    margin-bottom: 0.625rem;
+    margin-top: 1.5rem;
+    text-size-adjust: none;
+  }
+
+  a {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.8rem;
+    border: 1.5px solid var(--headersColor);
+    border-radius: 3.215rem;
+    background-color: var(--headersColor);
+    text-decoration: none;
+    color: var(--foregroundColor);
+    letter-spacing: 0.1rem;
+    transition: 250ms ease-in-out;
+  }
+
+  a:hover {
+    color: var(--headersColor);
+    background-color: var(--foregroundColor);
+  }
+
+  .mail-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 18.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+
+  .container {
+    background-color: var(--foregroundColor);
+    padding: 3rem 5rem 3rem 5rem;
+    width: 25.5rem;
+  }
+
+  .logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 11.25rem;
+    height: 11.25rem;
+  }
+
+  .data-value {
+    font-weight: 200;
+    color: var(--textColor);
+    text-transform: none;
+    display: inline;
+  }
+
+  .foundation-contact {
+    text-align: center;
+  }
+
+  .fa-envelope {
+    padding-top: 4px;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .container {
+      box-shadow: 12px 12px 18px -9px var(--headersColor);
+      border-radius: 15px;
+    }
+
+    body {
+      background-color: var(--backgroundColor);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-size-adjust: none;
+    }
+  }
+</style>
+
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Fundacja im. Zygmunta i Jana Karłowskich - dane rejestrowe, kontakt."
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#757d77" />
+    <meta name="msapplication-TileColor" content="#757d77" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/cc62848ea4.js"
+      crossorigin="anonymous"></script>
+
+    <title>Fundacja im. Zygmunta i Jana Karłowskich</title>
+  </head>
+  <body>
+    <main class="container">
+      <Image src={logo} alt="logotyp fundacji" class="logo" />
+
+      <header>
+        <h1 class="main-title">
+          Fundacja im.<br />Zygmunta i Jana Karłowskich
+        </h1>
+      </header>
+
+      <section class="foundation-info">
+        <header>
+          <h2 class="hr-title">dane fundacji</h2>
+        </header>
+
+        <hr />
+
+        <Data key="KRS">
+          <span class="data-value">0000348267</span>
+        </Data>
+
+        <Data key="NIP">
+          <span class="data-value">9522083030</span>
+        </Data>
+
+        <Data key="REGON">
+          <span class="data-value">142295229</span>
+        </Data>
+
+        <Data key="Adres">
+          <p class="data-value">
+            al. Piłsudskiego 17/4, 35-074 Rzeszów, Polska
+          </p>
+        </Data>
+
+        <Data key="Numer Rachunku Bankowego">
+          <br />
+          <br />
+          <div>
+            <p class="data-value">
+              BNP Paribas Polska <br />54 2030 0045 1110 0000 0251 3470
+            </p>
+          </div>
+        </Data>
+      </section>
+
+      <section class="foundation-contact">
+        <header>
+          <h2 class="hr-title">Kontakt</h2>
+        </header>
+        <hr />
+
+        <Data key=" Prezes Zarządu Fundacji">
+          <p class="data-value">&nbspPaweł Bietkowski</p>
+        </Data>
+
+        <a href="mailto:p.bietkowski@gmail.com" class="mail-container"
+          ><span class="fa-regular fa-envelope"></span>p.bietkowski@gmail.com</a
+        >
+      </section>
+    </main>
+  </body>
+</html>
