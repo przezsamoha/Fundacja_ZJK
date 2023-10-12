@@ -22,21 +22,23 @@ const shadowColor = "#5c635e";
     shadowColor,
   }}
 >
+  * {
+    box-sizing: border-box;
+  }
   body {
     font-family: "PT Sans", sans-serif;
     color: var(--textColor);
     min-height: 100vh;
+    min-width: 420px;
     width: 100vw;
-    text-size-adjust: none;
   }
 
   h1 {
     font-family: "PT Serif", serif;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 700;
     text-align: center;
     color: var(--headersColor);
-    text-size-adjust: none;
   }
 
   hr {
@@ -45,28 +47,29 @@ const shadowColor = "#5c635e";
   }
 
   .hr-title {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--shadowColor);
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 1.4px;
+    letter-spacing: 1.2px;
     margin-bottom: 0.625rem;
     margin-top: 1.5rem;
-    text-size-adjust: none;
   }
 
   a {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    padding-top: 0.7rem;
+    font-size: 13px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     border: 1.5px solid var(--headersColor);
     border-radius: 3.215rem;
     background-color: var(--headersColor);
     text-decoration: none;
+    text-align: center;
     color: var(--foregroundColor);
-    letter-spacing: 0.1rem;
+    letter-spacing: 2.5px;
     transition: 250ms ease-in-out;
   }
 
@@ -79,16 +82,16 @@ const shadowColor = "#5c635e";
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 18.125rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
+    width: 18rem;
   }
 
   .container {
     background-color: var(--foregroundColor);
-    padding: 3rem 5rem 3rem 5rem;
-    width: 25rem;
+    padding: 3rem 2rem 3rem 2rem;
+    width: 100%;
   }
 
   .logo {
@@ -99,6 +102,10 @@ const shadowColor = "#5c635e";
     height: 11.25rem;
   }
 
+  .fa-envelope {
+    margin-left: -10px;
+  }
+
   .data-value {
     font-weight: 200;
     color: var(--textColor);
@@ -106,18 +113,12 @@ const shadowColor = "#5c635e";
     display: inline;
   }
 
-  .foundation-contact {
-    text-align: center;
-  }
-
-  .fa-envelope {
-    padding-top: 4px;
-  }
-
   @media only screen and (min-width: 600px) {
     .container {
       box-shadow: 12px 12px 18px -9px var(--headersColor);
       border-radius: 15px;
+      width: 30rem;
+      padding: 3rem 4rem 3rem 4rem;
     }
 
     body {
@@ -125,7 +126,6 @@ const shadowColor = "#5c635e";
       display: flex;
       align-items: center;
       justify-content: center;
-      text-size-adjust: none;
     }
   }
 </style>
@@ -207,13 +207,13 @@ const shadowColor = "#5c635e";
           <br />
           <div>
             <p class="data-value">
-              BNP Paribas Polska <br /> 54 2030 0045 1110 0000 0251 3470
+              BNP Paribas Polska 54 2030 0045 1110 0000 0251 3470
             </p>
           </div>
         </Data>
       </section>
 
-      <section class="foundation-contact">
+      <section>
         <header>
           <h2 class="hr-title">Kontakt</h2>
         </header>
