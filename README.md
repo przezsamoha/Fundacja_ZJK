@@ -1,4 +1,4 @@
-![fundacja-zjk](https://github.com/przezsamoha/fundacja_zjk/assets/99020665/68c35438-db7d-41c9-930b-d32477eb365b)
+![fundacja-zjk](https://github.com/przezsamoha/fundacja_zjk/assets/99020665/76882eeb-2d84-4f22-946f-efcb3741702d)
 
 # Fundacja im. Zygmunta i Jana Karłowskich
 
@@ -22,7 +22,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`     | Starts local dev server at `localhost:4321`  |
 | `npm run build`   | Build your production site to `./dist/`      |
 | `npm run preview` | Preview your build locally, before deploying |
-
-## Licence
-
-MIT
